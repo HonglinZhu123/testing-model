@@ -1,0 +1,42 @@
+{
+  "model": {
+    "num_bands": 5,
+    "base_channels": 4,
+    "num_half_layer": 3,
+    "sample_indices": [1],
+    "time_dim": 16,
+    "norm_groups": 4,
+    "gssa_mode": "learned",
+    "gssa_content_probability": 0.0
+  },
+  "diffusion": {
+    "timesteps": 8,
+    "sampling_timesteps": 2,
+    "beta_schedule": "linear",
+    "loss_type": "l2",
+    "p2_gamma": 1.0,
+    "p2_k": 1.0,
+    "ddim_eta": 0.0,
+    "clip_min": 0.0,
+    "clip_max": 1.0
+  },
+  "data": {
+    "mode": "synthetic",
+    "length": 2,
+    "patch_size": 8,
+    "sigma": 25.0,
+    "seed": 1234,
+    "num_workers": 0
+  },
+  "train": {
+    "epochs": 1,
+    "batch_size": 1,
+    "optimizer": "portable_adamw",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "grad_clip": 1.0,
+    "amp": false,
+    "seed": 2024,
+    "output_dir": "runs/smoke"
+  }
+}
